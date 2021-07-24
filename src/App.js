@@ -1,12 +1,55 @@
+import React from 'react';
 import './App.css';
-import AddVideo from './components/userComponents/AddVideo';
-import PlayVideo from './components/userComponents/PlayVideo';
+import Welcome from './components/welcome/Welcome';
+import VideoFrame from './components/userComponents/VideoFrame';
+import AddVideo from './components/adminComponents/AddVideo';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 
 function App() {
   return (
     <div className="App">
-      {/* <AddVideo /> */}
-      <PlayVideo />
+      <Router>
+        
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <Link class="navbar-brand" to="/">
+                        Waatcho</Link>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item active">
+                                <Link class="nav-link" to="/">Home</Link>
+                            </li>
+                            <li class="nav-item">
+                                <Link class="nav-link" to="/AddVideo">Add New Video</Link>
+                            </li>
+                            <li class="nav-item">
+                                <Link class="nav-link" to="/VideoFrame">Play Video</Link>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <Switch>
+                    <Route path="/AddVideo">
+                        <AddVideo />
+                    </Route>
+                    <Route path="/VideoFrame">
+                        <VideoFrame />
+                    </Route>
+                    <Route path="/">
+                        <Welcome />
+                    </Route>
+                </Switch>
+
+            </Router>
     </div>
   );
 }
