@@ -1,24 +1,10 @@
 import React from 'react';
-import axios from 'axios';
 import { Player, BigPlayButton, LoadingSpinner, ControlBar, ReplayControl, ForwardControl, PlaybackRateMenuButton } from 'video-react';
 import "../../../node_modules/video-react/dist/video-react.css";
 import "./playvideo.css";
 
 export default class PlayVideo extends React.Component {
-  state = {
-    videos: []
-  }
-
-  componentDidMount() {
-    axios.get(`http://localhost:8080/downloadFile/f619f67c-7e01-4eba-9b9b-05338857e826`)
-      .then(res => {
-        const videos = res.data;
-        this.setState({ videos });
-      })
-  }
-
-
-
+ 
   render() {
     return (
       <div className="d-flex justify-content-center custom">
