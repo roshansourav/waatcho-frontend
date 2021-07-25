@@ -3,6 +3,7 @@ import './App.css';
 import Welcome from './components/welcome/Welcome';
 import VideoFrame from './components/userComponents/VideoFrame';
 import AddVideo from './components/adminComponents/AddVideo';
+import logo_waatcho from "./assets/logo_waatcho.png";
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,6 +19,7 @@ function App() {
         
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                     <Link class="navbar-brand" to="/">
+                        <img src={logo_waatcho} alt="logo_waatcho" width="30" height="30" />
                         Waatcho</Link>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
