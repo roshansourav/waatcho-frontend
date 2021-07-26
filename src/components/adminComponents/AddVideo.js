@@ -95,39 +95,27 @@ class AddVideo extends Component {
 
 		return (
 
-
-			<div class="card text-center">
-				<div class="card-header">
-					Upload
-				</div>
-				<div class="card-body">
-					<h5 class="card-title">Upload New Video File Here</h5>
-					<input className="form-control" type="file" onChange={this.onFileChange} />
-					<br />
-					<button onClick={this.onFileUpload}>
-						Upload!
-					</button>
-				</div>
-				<div class="card-footer text-muted">
-					{this.fileData()}
+			<div>
+				<div id="stars"></div>
+				<div class="card text-center border border-warning">
+					<div class="card-header bg-warning text-dark">
+						Upload
+					</div>
+					<div class="card-body">
+						<h5 class="card-title">Upload New Video File Here</h5>
+						<input className="form-control" type="file" onChange={this.onFileChange} />
+						<br />
+						<button class="btn btn-success btn-width" onClick={this.onFileUpload}>
+							Upload!
+						</button>
+					</div>
+					<div class="card-footer bg-warning text-dark">
+						{this.fileData()}
+					</div>
 				</div>
 			</div>
 
-			// <div className="container text-center">
 
-			// 	<h3>
-			// 		Upload New Video File Here
-			// 	</h3>
-			// 	<div>
-			// 		<input type="file" onChange={this.onFileChange} />
-			// 		<button onClick={this.onFileUpload}>
-			// 			Upload!
-			// 		</button>
-			// 	</div>
-			// 	{this.fileData()}
-
-
-			// </div>
 		);
 	}
 }

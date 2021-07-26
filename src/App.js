@@ -19,7 +19,9 @@ function App() {
         
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                     <Link class="navbar-brand" to="/">
+                        &nbsp; &nbsp;
                         <img src={logo_waatcho} alt="logo_waatcho" width="30" height="30" />
+                        &nbsp;
                         Waatcho</Link>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>

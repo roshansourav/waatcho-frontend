@@ -47,8 +47,10 @@ export default class VideoFrame extends React.Component {
 
     render() {
         return (
+            <div>
+                
                 <div className="container-fluid">
-                    <div className="d-flex">
+                    <div className="d-flex custom-index">
                         <div className="p-2">
                             <button className="btn btn-primary custom" onClick={this.handlePrev} type="button">Prev</button>
                         </div>
@@ -60,6 +62,7 @@ export default class VideoFrame extends React.Component {
                     <PlayVideo videoURL={this.state.videos[this.state.currentTrackIndex]} />
                     </div>
                 </div>
+            </div>
             
         )
     }
